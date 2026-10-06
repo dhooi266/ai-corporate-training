@@ -1,0 +1,494 @@
+<!doctype html>
+<html lang="en" data-lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI for the Modern Workforce | David Hooi</title>
+<meta name="description" content="Hands-on corporate AI training by David Hooi, HRD Corp Accredited Trainer. Your team leaves with working AI assistants, dashboards, content and an AI roadmap. 企业AI实战培训。">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="D Action Consultancy &amp; Services Sdn Bhd">
+<meta property="og:locale" content="en_MY">
+<meta property="og:locale:alternate" content="zh_CN">
+<meta property="og:url" content="https://dhooi266.github.io/ai-corporate-training/">
+<meta property="og:title" content="Make AI Your Team's Everyday Productivity Partner | 让AI成为团队的效率伙伴">
+<meta property="og:description" content="Hands-on corporate AI training by David Hooi — HRD Corp Accredited Trainer, 4,000+ professionals trained across 100+ companies. HRD Corp claimable. 企业AI实战培训，可申请HRD Corp。">
+<meta property="og:image" content="https://dhooi266.github.io/ai-corporate-training/og-image.jpg">
+<meta property="og:image:secure_url" content="https://dhooi266.github.io/ai-corporate-training/og-image.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Corporate AI training by David Hooi, D Action Consultancy.">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Make AI Your Team's Everyday Productivity Partner">
+<meta name="twitter:description" content="Hands-on corporate AI training by David Hooi — HRD Corp Accredited Trainer. 企业AI实战培训。">
+<meta name="twitter:image" content="https://dhooi266.github.io/ai-corporate-training/og-image.jpg">
+
+<meta name="theme-color" content="#0f4a33">
+<link rel="icon" href="assets/dac-logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Noto+Sans+SC:wght@400;500;700;900&display=swap">
+
+<style>
+:root{
+  --green:#0f4a33;
+  --green-2:#16613f;
+  --green-soft:#e9f3ee;
+  --orange:#e8792f;
+  --orange-2:#c95f17;
+  --orange-soft:#fdf0e6;
+  --ink:#14211b;
+  --muted:#58665f;
+  --line:#dfe6e2;
+  --bg:#ffffff;
+  --bg-2:#f6f8f6;
+  --card:#ffffff;
+  --radius:18px;
+  --shadow:0 1px 2px rgba(15,74,51,.06),0 10px 30px rgba(15,74,51,.07);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;background:var(--bg);color:var(--ink);
+  font-family:"Plus Jakarta Sans","Noto Sans SC",system-ui,-apple-system,"Segoe UI",sans-serif;
+  font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased;
+}
+html[data-lang="zh"] body{font-family:"Noto Sans SC","Plus Jakarta Sans",system-ui,sans-serif;line-height:1.75}
+[data-lang="en"] .zh,[data-lang="zh"] .en{display:none !important}
+img{max-width:100%;display:block}
+a{color:inherit}
+.wrap{max-width:1160px;margin:0 auto;padding:0 20px}
+h1,h2,h3{line-height:1.15;margin:0;letter-spacing:-.02em}
+html[data-lang="zh"] h1,html[data-lang="zh"] h2,html[data-lang="zh"] h3{letter-spacing:0;line-height:1.3}
+h2{font-size:clamp(28px,3.6vw,42px);font-weight:800}
+h3{font-size:19px;font-weight:700}
+p{margin:0}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--orange-2)}
+html[data-lang="zh"] .eyebrow{letter-spacing:.06em}
+.eyebrow::before{content:"";width:22px;height:2px;background:var(--orange)}
+.sec{padding:88px 0}
+.sec-head{max-width:720px;margin-bottom:44px}
+.sec-head p{color:var(--muted);margin-top:14px;font-size:18px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:14px 24px;border-radius:999px;font-weight:700;font-size:16px;text-decoration:none;border:2px solid transparent;transition:transform .15s,background .15s}
+.btn:hover{transform:translateY(-1px)}
+.btn-primary{background:var(--orange);color:#fff}
+.btn-primary:hover{background:var(--orange-2)}
+.btn-ghost{border-color:rgba(255,255,255,.4);color:#fff}
+.btn-ghost:hover{background:rgba(255,255,255,.1)}
+.btn svg{width:20px;height:20px;flex:none}
+
+/* nav */
+.nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:68px;gap:12px}
+.nav .logo img{height:40px;width:auto}
+.nav-right{display:flex;align-items:center;gap:12px}
+.lang{display:flex;background:var(--bg-2);border:1px solid var(--line);border-radius:999px;padding:3px}
+.lang button{border:0;background:transparent;font:inherit;font-size:14px;font-weight:700;padding:7px 14px;border-radius:999px;cursor:pointer;color:var(--muted)}
+.lang button[aria-pressed="true"]{background:var(--green);color:#fff}
+.nav .btn{padding:10px 18px;font-size:14px}
+
+/* hero */
+.hero{background:radial-gradient(900px 500px at 85% 10%,rgba(232,121,47,.22),transparent 60%),linear-gradient(160deg,#0b3a28 0%,#0f4a33 55%,#145a3e 100%);color:#fff;overflow:hidden}
+.hero .wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center;padding-top:72px;padding-bottom:72px}
+.hero .eyebrow{color:#ffb27a}
+.hero .eyebrow::before{background:#ffb27a}
+.hero h1{font-size:clamp(36px,5.2vw,62px);font-weight:800;margin:18px 0 20px}
+.hero h1 em{font-style:normal;color:#ffb27a}
+.hero .lead{font-size:19px;color:rgba(255,255,255,.85);max-width:560px}
+.hero-cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px}
+.hero-tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:28px}
+.hero-tags span{font-size:13px;font-weight:600;padding:6px 12px;border-radius:999px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.18)}
+.hero-photo{position:relative;justify-self:center;width:100%;max-width:420px}
+.hero-photo .frame{border-radius:28px;overflow:hidden;background:#fff;box-shadow:0 30px 60px rgba(0,0,0,.35);aspect-ratio:4/4.6}
+.hero-photo .frame img{width:100%;height:100%;object-fit:cover;object-position:top center}
+.hero-photo .badge{position:absolute;left:-26px;bottom:28px;background:#fff;color:var(--ink);border-radius:16px;padding:12px 16px;display:flex;gap:12px;align-items:center;box-shadow:0 14px 30px rgba(0,0,0,.25)}
+.hero-photo .badge img{width:52px;height:52px}
+.hero-photo .badge strong{display:block;font-size:15px}
+.hero-photo .badge small{color:var(--muted);font-size:13px}
+
+/* stats */
+.stats{background:var(--bg-2);border-bottom:1px solid var(--line)}
+.stats .wrap{display:grid;grid-template-columns:repeat(4,1fr)}
+.stat{padding:30px 16px;text-align:center;border-right:1px solid var(--line)}
+.stat:last-child{border-right:0}
+.stat b{display:block;font-size:clamp(28px,3.4vw,40px);font-weight:800;color:var(--green);line-height:1.1}
+.stat span{color:var(--muted);font-size:14px;font-weight:500}
+
+/* gains */
+.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:28px;box-shadow:var(--shadow)}
+.card .ic{width:48px;height:48px;border-radius:14px;display:grid;place-items:center;background:var(--green-soft);color:var(--green);margin-bottom:18px}
+.card .ic svg{width:24px;height:24px}
+.card h3{margin-bottom:10px}
+.card p{color:var(--muted);font-size:16px}
+.card .tools{margin-top:14px;font-size:13px;font-weight:600;color:var(--green-2)}
+
+/* deliverables */
+.deliver{background:var(--green);color:#fff}
+.deliver .sec-head p{color:rgba(255,255,255,.78)}
+.deliver .eyebrow{color:#ffb27a}.deliver .eyebrow::before{background:#ffb27a}
+.dl{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;counter-reset:d}
+.dl li{list-style:none;display:flex;gap:18px;align-items:flex-start;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);border-radius:16px;padding:22px}
+.dl li::before{counter-increment:d;content:counter(d,decimal-leading-zero);font-weight:800;font-size:15px;color:var(--green);background:#ffb27a;border-radius:10px;min-width:40px;height:40px;display:grid;place-items:center}
+.dl strong{display:block;font-size:18px;margin-bottom:4px}
+.dl span{color:rgba(255,255,255,.75);font-size:15px}
+.dl{padding:0;margin:0}
+
+/* impact */
+.impact{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.imp{border-top:3px solid var(--orange);padding-top:20px}
+.imp h3{margin-bottom:8px}
+.imp p{color:var(--muted);font-size:16px}
+
+/* tools strip */
+.toolwall{display:flex;flex-wrap:wrap;gap:10px;margin-top:40px}
+.toolwall span{padding:9px 16px;border-radius:999px;background:var(--bg-2);border:1px solid var(--line);font-weight:600;font-size:15px}
+
+/* how */
+.how{background:var(--bg-2)}
+.how-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start}
+.steps{display:grid;gap:14px}
+.step{display:flex;gap:16px;background:#fff;border:1px solid var(--line);border-radius:16px;padding:20px}
+.step .n{flex:none;width:36px;height:36px;border-radius:50%;background:var(--orange-soft);color:var(--orange-2);font-weight:800;display:grid;place-items:center}
+.step h3{font-size:17px;margin-bottom:4px}
+.step p{color:var(--muted);font-size:15px}
+.mix{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:28px;box-shadow:var(--shadow)}
+.bar{display:flex;height:16px;border-radius:999px;overflow:hidden;margin:16px 0 10px}
+.bar i:first-child{background:var(--orange);width:70%}
+.bar i:last-child{background:var(--green);width:30%}
+.legend{display:flex;justify-content:space-between;font-size:14px;color:var(--muted);font-weight:600}
+.legend b{color:var(--ink)}
+.who{margin-top:28px}
+.who h3{margin-bottom:14px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chips span{font-size:14px;font-weight:600;padding:7px 13px;border-radius:999px;background:var(--green-soft);color:var(--green)}
+
+/* trainer */
+.trainer-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:56px;align-items:center}
+.t-photo{position:relative}
+.t-photo img.main{border-radius:24px;width:100%;aspect-ratio:4/4.8;object-fit:cover;object-position:top;box-shadow:var(--shadow)}
+.t-photo .quote{position:absolute;right:-18px;bottom:-22px;background:var(--orange);color:#fff;font-weight:700;font-size:17px;line-height:1.35;padding:18px 20px;border-radius:16px;max-width:250px;box-shadow:0 14px 30px rgba(201,95,23,.35)}
+.trainer h2 small{font-size:.5em;color:var(--green-2);font-weight:700;margin-left:6px}
+.t-role{color:var(--orange-2);font-weight:700;margin:10px 0 22px}
+.trainer p.bio{color:var(--muted);margin-bottom:14px}
+.trainer p.bio b{color:var(--ink)}
+.creds{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:26px}
+.cred{display:flex;gap:12px;align-items:center;padding:14px 16px;border:1px solid var(--line);border-radius:14px;background:var(--bg-2);font-weight:600;font-size:15px}
+.cred svg{width:22px;height:22px;color:var(--green);flex:none}
+
+/* brands */
+.brands{background:var(--bg-2);padding:72px 0}
+.brands .box{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:28px;box-shadow:var(--shadow)}
+.brands img{margin:0 auto;max-height:560px;width:auto}
+.brands h2{text-align:center;margin-bottom:10px}
+.brands .sub{text-align:center;color:var(--muted);margin-bottom:28px}
+
+/* cta */
+.cta{background:radial-gradient(700px 400px at 90% 0%,rgba(232,121,47,.25),transparent 60%),var(--green);color:#fff;text-align:center}
+.cta h2{max-width:760px;margin:0 auto 16px}
+.cta p{color:rgba(255,255,255,.8);max-width:620px;margin:0 auto;font-size:18px}
+.cta .hero-cta{justify-content:center}
+.contact{display:flex;flex-wrap:wrap;justify-content:center;gap:12px 32px;margin-top:36px;font-weight:600}
+.contact a{text-decoration:none;display:inline-flex;gap:8px;align-items:center;color:rgba(255,255,255,.9)}
+.contact a:hover{color:#ffb27a}
+.contact svg{width:18px;height:18px}
+footer{background:#0b3a28;color:rgba(255,255,255,.6);font-size:14px;padding:28px 0}
+footer .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+footer .flogo{background:#fff;border-radius:12px;padding:8px 14px;display:inline-flex}
+footer .flogo img{height:38px;width:auto}
+.js .reveal{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease}
+.js .reveal.in{opacity:1;transform:none}
+.card,.step,.cred{transition:transform .2s,box-shadow .2s,border-color .2s}
+.card:hover{transform:translateY(-4px);border-color:#b9d6c7;box-shadow:0 18px 40px rgba(15,74,51,.13)}
+.card:hover .ic{background:var(--green);color:#fff}
+.card .ic{transition:background .2s,color .2s}
+.step:hover{transform:translateX(4px)}
+.dl li{transition:background .2s}
+.dl li:hover{background:rgba(255,255,255,.11)}
+@media (prefers-reduced-motion:reduce){.js .reveal{opacity:1;transform:none;transition:none}*{scroll-behavior:auto}}
+
+.wa-float{position:fixed;right:20px;bottom:20px;z-index:60;width:58px;height:58px;border-radius:50%;background:#25d366;display:grid;place-items:center;box-shadow:0 10px 24px rgba(0,0,0,.25)}
+.wa-float svg{width:30px;height:30px;color:#fff}
+
+@media (max-width:960px){
+  .hero .wrap,.how-grid,.trainer-grid{grid-template-columns:1fr}
+  .hero-photo{max-width:360px}
+  .grid-3{grid-template-columns:1fr 1fr}
+  .impact{grid-template-columns:1fr 1fr}
+  .t-photo{max-width:420px}
+}
+@media (max-width:640px){
+  .sec{padding:64px 0}
+  .wrap{padding:0 16px}
+  .grid-3,.dl,.impact,.creds{grid-template-columns:1fr}
+  .stats .wrap{grid-template-columns:1fr 1fr}
+  .stat:nth-child(2){border-right:0}
+  .stat:nth-child(-n+2){border-bottom:1px solid var(--line)}
+  .nav .btn{display:none}
+  .hero .wrap{padding-top:48px;padding-bottom:56px}
+  .hero-photo .badge{left:8px;bottom:12px}
+  .t-photo .quote{right:8px}
+  .hero-cta .btn{flex:1 1 100%}
+}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-wa" viewBox="0 0 24 24"><path fill="currentColor" d="M17.47 14.38c-.3-.15-1.75-.86-2.02-.96-.27-.1-.47-.15-.67.15-.2.3-.77.96-.94 1.16-.17.2-.35.22-.64.07-.3-.15-1.25-.46-2.38-1.47-.88-.79-1.47-1.76-1.64-2.05-.17-.3-.02-.46.13-.6.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.03-.52-.07-.15-.67-1.6-.92-2.2-.24-.58-.49-.5-.67-.5h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.07 2.88 1.21 3.08.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.63.71.22 1.36.19 1.87.12.57-.09 1.75-.72 2-1.41.25-.69.25-1.29.17-1.41-.07-.13-.27-.2-.57-.35zM12.04 21.5h-.01a9.4 9.4 0 0 1-4.79-1.31l-.34-.2-3.56.93.95-3.47-.22-.36a9.42 9.42 0 0 1-1.44-5.02c0-5.2 4.23-9.43 9.44-9.43 2.52 0 4.89.98 6.67 2.77a9.37 9.37 0 0 1 2.76 6.67c0 5.2-4.24 9.43-9.44 9.43zm8.03-17.46A11.27 11.27 0 0 0 12.04.72C5.79.72.69 5.8.69 12.06c0 2 .52 3.95 1.52 5.67L.6 23.28l5.68-1.49a11.3 11.3 0 0 0 5.76 1.47h.01c6.25 0 11.34-5.09 11.35-11.35 0-3.03-1.18-5.88-3.33-8.03z"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M4 5h16a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1zm-1 1 9 7 9-7"/></symbol>
+  <symbol id="i-web" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></g></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" d="M20 6 9 17l-5-5"/></symbol>
+</svg>
+
+<nav class="nav">
+  <div class="wrap">
+    <a class="logo" href="#top" aria-label="D Action Consultancy"><img src="assets/dac-logo.png" alt="DAC — Firing Up Growth"></a>
+    <div class="nav-right">
+      <div class="lang" role="group" aria-label="Language">
+        <button type="button" data-set-lang="en" aria-pressed="true">EN</button>
+        <button type="button" data-set-lang="zh" aria-pressed="false">中文</button>
+      </div>
+      <a class="btn btn-primary" href="https://wa.me/60184043913" target="_blank" rel="noopener">
+        <span class="en">Enquire now</span><span class="zh">立即咨询</span>
+      </a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="wrap">
+    <div>
+      <span class="eyebrow"><span class="en">Corporate AI Training · HRD Corp Claimable</span><span class="zh">企业AI培训 · 可申请 HRD Corp</span></span>
+      <h1>
+        <span class="en">Make AI your team's <em>everyday productivity partner.</em></span>
+        <span class="zh">让AI成为团队<em>每天都在用的效率伙伴。</em></span>
+      </h1>
+      <p class="lead">
+        <span class="en">A hands-on, in-house programme that moves your people beyond basic chatting with AI. They leave with working AI assistants, dashboards, content and a clear roadmap — ready to use the next working day.</span>
+        <span class="zh">一套为企业量身打造的实战培训，带领员工超越“只会和AI聊天”的阶段。学员离开课堂时，手上已经有可运作的AI助手、数据仪表板、内容成品和清晰的AI落地路线图——第二天上班就能用。</span>
+      </p>
+      <div class="hero-cta">
+        <a class="btn btn-primary" href="https://wa.me/60184043913" target="_blank" rel="noopener"><svg><use href="#i-wa"/></svg><span class="en">WhatsApp David</span><span class="zh">WhatsApp 联系 David</span></a>
+        <a class="btn btn-ghost" href="#gains"><span class="en">What your team gains</span><span class="zh">团队将获得什么</span></a>
+      </div>
+      <div class="hero-tags">
+        <span class="en">2-day in-house</span><span class="zh">两天企业内训</span>
+        <span class="en">70% hands-on</span><span class="zh">70% 实操</span>
+        <span class="en">English &amp; 中文 delivery</span><span class="zh">中英双语授课</span>
+      </div>
+    </div>
+    <div class="hero-photo">
+      <div class="frame"><img src="assets/david-hooi.jpg" alt="David Hooi" width="800" height="923"></div>
+      <div class="badge">
+        <img src="assets/hrdc-badge.png" alt="HRD Corp Accredited Trainer">
+        <div><strong>David Hooi</strong><small class="en">HRD Corp Accredited Trainer</small><small class="zh">HRD Corp 认证培训师</small></div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section class="stats" aria-label="Highlights">
+  <div class="wrap">
+    <div class="stat"><b>4,000+</b><span class="en">professionals trained</span><span class="zh">位专业人士受训</span></div>
+    <div class="stat"><b>100+</b><span class="en">companies served</span><span class="zh">家企业客户</span></div>
+    <div class="stat"><b>20+</b><span class="en">years corporate leadership</span><span class="zh">年企业管理经验</span></div>
+    <div class="stat"><b>15+</b><span class="en">AI tools mastered hands-on</span><span class="zh">款AI工具实操掌握</span></div>
+  </div>
+</section>
+
+<section class="sec" id="gains">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow"><span class="en">What participants gain</span><span class="zh">学员收获</span></span>
+      <h2 style="margin-top:14px"><span class="en">Practical AI skills your people will use every single day</span><span class="zh">员工每天都用得上的实用AI技能</span></h2>
+      <p><span class="en">Every skill is taught on real business tasks — emails, reports, data, presentations and campaigns — not theory.</span><span class="zh">每项技能都以真实工作任务来练习——电邮、报告、数据、简报与营销活动——而不是纸上谈兵。</span></p>
+    </div>
+    <div class="grid-3">
+      <article class="card">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16M4 12h10M4 18h7"/><path d="m17 15 3 3-3 3"/></svg></div>
+        <h3><span class="en">Prompt with precision</span><span class="zh">精准下指令</span></h3>
+        <p><span class="en">Use the CoSTAR framework to control tone, audience and format — getting accurate, on-brand output the first time instead of endless retries.</span><span class="zh">运用 CoSTAR 框架掌控语气、对象与格式，一次就产出准确、符合品牌的内容，不再反复试错。</span></p>
+      </article>
+      <article class="card">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg></div>
+        <h3><span class="en">The right AI for every job</span><span class="zh">对的工作，用对的AI</span></h3>
+        <p><span class="en">Know when to use ChatGPT for analysis, Claude for building, Perplexity for deep research, DeepSeek for local-language writing and Gemini for assistants.</span><span class="zh">清楚何时用 ChatGPT 做分析、Claude 做开发、Perplexity 做深度调研、DeepSeek 写本地语言内容、Gemini 打造助手。</span></p>
+      </article>
+      <article class="card">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="m7 15 4-4 3 3 6-6"/></svg></div>
+        <h3><span class="en">Data &amp; financial insight, fast</span><span class="zh">快速洞察数据与财务</span></h3>
+        <p><span class="en">Clean and analyse data, build forecasts, cash-flow models, budget scenarios and interactive dashboards — no coding background required.</span><span class="zh">清理与分析数据，制作预测、现金流模型、预算情境与互动仪表板——无需任何编程背景。</span></p>
+      </article>
+      <article class="card">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></svg></div>
+        <h3><span class="en">Presentations in minutes</span><span class="zh">几分钟完成专业简报</span></h3>
+        <p><span class="en">Turn reports and bullet points into slide decks, diagrams and one-page infographics, and summarise scattered documents into clear briefings.</span><span class="zh">把报告和要点转化为简报、图表与一页式信息图，并把零散文件整理成清晰的汇报重点。</span></p>
+      </article>
+      <article class="card">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="7" width="16" height="12" rx="3"/><path d="M12 7V3M9 13h.01M15 13h.01"/></svg></div>
+        <h3><span class="en">AI assistants that automate work</span><span class="zh">自动化工作的AI助手</span></h3>
+        <p><span class="en">Design custom GPTs and AI assistants for their own role — FAQ bots, content assistants, auto data analysts — that take repetitive work off their plate.</span><span class="zh">为自己的岗位设计专属 GPT 与 AI 助手——FAQ 机器人、内容助理、自动数据分析员——把重复性工作交给AI。</span></p>
+      </article>
+      <article class="card">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m10 9 5 3-5 3z"/></svg></div>
+        <h3><span class="en">On-brand visuals &amp; video</span><span class="zh">符合品牌的视觉与视频</span></h3>
+        <p><span class="en">Create images and short videos for marketing, training and internal comms that stay consistent with the company's brand.</span><span class="zh">为营销、培训与内部沟通制作图片和短视频，同时保持企业品牌风格一致。</span></p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="sec deliver">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow"><span class="en">Walk away with</span><span class="zh">带走的成果</span></span>
+      <h2 style="margin-top:14px"><span class="en">Real outputs, built during the training</span><span class="zh">在课堂上就完成的真实成果</span></h2>
+      <p><span class="en">Participants don't just learn about AI — they build things they keep using after the session ends.</span><span class="zh">学员不只是“认识”AI，而是亲手做出课程结束后仍能持续使用的成果。</span></p>
+    </div>
+    <ol class="dl">
+      <li><div><strong class="en">A custom AI assistant for their role</strong><strong class="zh">专属岗位的AI助手</strong><span class="en">A working GPT tailored to their department's daily tasks.</span><span class="zh">一个针对部门日常任务、可实际运作的 GPT。</span></div></li>
+      <li><div><strong class="en">An interactive performance dashboard</strong><strong class="zh">互动式业绩仪表板</strong><span class="en">Generated with AI from their own data — no coding.</span><span class="zh">用AI从自己的数据生成，无需写代码。</span></div></li>
+      <li><div><strong class="en">A reusable prompt playbook</strong><strong class="zh">可重复使用的指令手册</strong><span class="en">CoSTAR prompts for emails, campaigns, reports and analysis.</span><span class="zh">涵盖电邮、营销、报告与分析的 CoSTAR 指令模板。</span></div></li>
+      <li><div><strong class="en">A slide deck &amp; one-page infographic</strong><strong class="zh">整套简报与一页信息图</strong><span class="en">Produced in a fraction of the usual time.</span><span class="zh">只需平时的一小部分时间就能完成。</span></div></li>
+      <li><div><strong class="en">Forecast &amp; cash-flow models</strong><strong class="zh">预测与现金流模型</strong><span class="en">Plus budget scenarios and supplier evaluation analysis.</span><span class="zh">另含预算情境分析与供应商评估。</span></div></li>
+      <li><div><strong class="en">A 3-month content plan &amp; visual campaign</strong><strong class="zh">三个月内容规划与视觉宣传</strong><span class="en">Including AI-generated images and video, ready to adapt.</span><span class="zh">包含AI生成的图片与视频，可直接调整使用。</span></div></li>
+      <li style="grid-column:1/-1"><div><strong class="en">A department AI implementation roadmap</strong><strong class="zh">部门AI落地路线图</strong><span class="en">Use cases mapped to quick wins (3–6 months), mid-term (6–12 months) and long-term (12–24 months) — with stakeholders, tools, pilot plan and success metrics, presented to the group.</span><span class="zh">把应用场景规划为短期速赢（3–6个月）、中期（6–12个月）与长期（12–24个月），并列明相关人员、工具、试点计划与成功指标，在课堂上分组汇报。</span></div></li>
+    </ol>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow"><span class="en">Impact for your organisation</span><span class="zh">为企业带来的价值</span></span>
+      <h2 style="margin-top:14px"><span class="en">Better work, done faster — with people still in charge</span><span class="zh">更快、更好地完成工作——由人主导，AI助力</span></h2>
+    </div>
+    <div class="impact">
+      <div class="imp"><h3><span class="en">Speed</span><span class="zh">效率</span></h3><p><span class="en">Hours of drafting, formatting and analysis reduced to minutes.</span><span class="zh">数小时的撰写、排版与分析，缩短到几分钟。</span></p></div>
+      <div class="imp"><h3><span class="en">Quality &amp; consistency</span><span class="zh">质量与一致性</span></h3><p><span class="en">Structured prompts give reliable, on-brand output across teams.</span><span class="zh">结构化指令让各团队产出稳定、符合品牌的成果。</span></p></div>
+      <div class="imp"><h3><span class="en">Better decisions</span><span class="zh">更好的决策</span></h3><p><span class="en">Faster research and clearer data insight for managers.</span><span class="zh">更快的调研、更清晰的数据洞察，助力管理层决策。</span></p></div>
+      <div class="imp"><h3><span class="en">Confident adoption</span><span class="zh">自信落地</span></h3><p><span class="en">A shared roadmap so AI is adopted responsibly, not randomly.</span><span class="zh">有共同的路线图，AI应用有序、负责任，而非各自摸索。</span></p></div>
+    </div>
+    <div class="toolwall" aria-label="Tools covered">
+      <span>ChatGPT</span><span>Claude</span><span>Google Gemini</span><span>Perplexity</span><span>DeepSeek</span><span>NotebookLM</span><span>Gamma</span><span>Napkin AI</span><span>Nano Banana Pro</span><span>Leonardo</span><span>Ideogram</span><span>SeeDream</span><span>Veo 3</span><span>Sora 2</span><span>Custom GPTs</span>
+    </div>
+  </div>
+</section>
+
+<section class="sec how">
+  <div class="wrap how-grid">
+    <div>
+      <span class="eyebrow"><span class="en">How it's delivered</span><span class="zh">授课方式</span></span>
+      <h2 style="margin:14px 0 28px"><span class="en">Learn by doing, on your own work</span><span class="zh">边做边学，练的是自己的工作</span></h2>
+      <div class="steps">
+        <div class="step"><div class="n">1</div><div><h3><span class="en">Live demonstrations</span><span class="zh">现场示范</span></h3><p><span class="en">Each tool shown on real business scenarios from Malaysian workplaces.</span><span class="zh">每款工具都以马来西亚职场的真实业务场景示范。</span></p></div></div>
+        <div class="step"><div class="n">2</div><div><h3><span class="en">Hands-on exercises</span><span class="zh">动手实操</span></h3><p><span class="en">Participants practise immediately on emails, data, decks and content.</span><span class="zh">学员立即在电邮、数据、简报与内容上动手练习。</span></p></div></div>
+        <div class="step"><div class="n">3</div><div><h3><span class="en">Team challenges &amp; peer review</span><span class="zh">团队挑战与互评</span></h3><p><span class="en">Groups automate a common business task and refine each other's work.</span><span class="zh">分组自动化一项常见业务任务，并互相点评优化。</span></p></div></div>
+        <div class="step"><div class="n">4</div><div><h3><span class="en">Final roadmap presentation</span><span class="zh">路线图成果汇报</span></h3><p><span class="en">Teams present a practical AI plan their department can start on.</span><span class="zh">各组汇报部门可立即启动的AI实施计划。</span></p></div></div>
+      </div>
+    </div>
+    <div>
+      <div class="mix">
+        <h3><span class="en">Training mix</span><span class="zh">课程比例</span></h3>
+        <div class="bar" aria-hidden="true"><i></i><i></i></div>
+        <div class="legend"><span><b>70%</b> <span class="en">hands-on practice</span><span class="zh">实操练习</span></span><span><b>30%</b> <span class="en">concepts &amp; demos</span><span class="zh">概念与示范</span></span></div>
+        <div class="who">
+          <h3><span class="en">Ideal for</span><span class="zh">适合对象</span></h3>
+          <div class="chips">
+            <span class="en">Executives &amp; managers</span><span class="zh">高管与经理</span>
+            <span class="en">Marketing &amp; communications</span><span class="zh">市场与传播</span>
+            <span class="en">Sales &amp; business development</span><span class="zh">销售与业务拓展</span>
+            <span class="en">HR, L&amp;D &amp; trainers</span><span class="zh">人力资源与培训</span>
+            <span class="en">Finance &amp; analysts</span><span class="zh">财务与分析</span>
+            <span class="en">Project &amp; operations teams</span><span class="zh">项目与营运团队</span>
+            <span class="en">SME owners &amp; entrepreneurs</span><span class="zh">中小企业主与创业者</span>
+          </div>
+        </div>
+        <p style="margin-top:22px;color:var(--muted);font-size:15px"><span class="en">No technical background needed. Delivered in English, Mandarin or both.</span><span class="zh">无需技术背景。可用英语、华语或双语授课。</span></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec trainer" id="trainer">
+  <div class="wrap trainer-grid">
+    <div class="t-photo">
+      <img class="main" src="assets/david-hooi-2.jpg" alt="David Hooi" width="700" height="836">
+      <div class="quote"><span class="en">“Transform workflows. Accelerate growth. Lead with AI.”</span><span class="zh">“改造工作流程，加速业务增长，以AI引领未来。”</span></div>
+    </div>
+    <div>
+      <span class="eyebrow"><span class="en">Your trainer</span><span class="zh">培训师</span></span>
+      <h2 style="margin-top:14px">David Hooi<small>BEng, MBA</small></h2>
+      <p class="t-role"><span class="en">AI Adoption Specialist · Corporate Trainer · Founder, D Action Consultancy</span><span class="zh">AI应用落地专家 · 企业培训师 · D Action Consultancy 创办人</span></p>
+      <p class="bio"><span class="en">David brings <b>over 20 years of commercial and leadership experience at GlaxoSmithKline (GSK)</b>, where he served as Sales Director and earned multiple Sales Excellence Awards. He knows what real business pressure looks like — and teaches AI as a tool to meet it.</span><span class="zh">David 拥有<b>超过20年在葛兰素史克（GSK）的商业与管理经验</b>，曾任销售总监，并多次荣获销售卓越奖。他深知企业面对的真实压力，并把AI作为解决这些压力的实用工具来教授。</span></p>
+      <p class="bio"><span class="en">As founder of D Action Consultancy &amp; Services, he specialises in <b>AI adoption and implementation</b> for corporations and SMEs. In under two years he has trained <b>4,000+ participants across 100+ companies</b> — including major banks, insurers, government agencies and multinationals.</span><span class="zh">作为 D Action Consultancy &amp; Services 创办人，他专注于为大型企业与中小企业推动<b>AI应用与落地</b>。在不到两年内，他已为<b>超过100家企业、4,000多名学员</b>授课，包括大型银行、保险公司、政府机构与跨国企业。</span></p>
+      <div class="creds">
+        <div class="cred"><svg><use href="#i-check"/></svg><span class="en">HRD Corp Accredited Trainer</span><span class="zh">HRD Corp 认证培训师</span></div>
+        <div class="cred"><svg><use href="#i-check"/></svg><span class="en">Google AI Leader</span><span class="zh">Google AI Leader</span></div>
+        <div class="cred"><svg><use href="#i-check"/></svg><span class="en">Ex-Sales Director, GSK</span><span class="zh">前 GSK 销售总监</span></div>
+        <div class="cred"><svg><use href="#i-check"/></svg><span class="en">Bilingual: English &amp; Mandarin</span><span class="zh">中英双语授课</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="brands">
+  <div class="wrap">
+    <div class="box">
+      <h2><span class="en">Trusted by leading organisations</span><span class="zh">深受知名机构信赖</span></h2>
+      <p class="sub"><span class="en">Banks, insurers, multinationals, government agencies and growing SMEs.</span><span class="zh">银行、保险公司、跨国企业、政府机构与成长中的中小企业。</span></p>
+      <img src="assets/brands.jpg" alt="Client logos including ExxonMobil, Novartis, Great Eastern, RHB, KWSP, Electrolux, Tesla, Intel, Tenaga Nasional, DRB-HICOM, UOB Kay Hian, AON and others" width="1400" height="1393">
+    </div>
+  </div>
+</section>
+
+<section class="sec cta" id="contact">
+  <div class="wrap">
+    <h2><span class="en">Bring practical AI to your team</span><span class="zh">把实用AI带进您的团队</span></h2>
+    <p><span class="en">Tell us about your team and goals — we'll tailor the examples, exercises and tools to your industry. HRD Corp claimable.</span><span class="zh">告诉我们您的团队与目标，我们会根据您的行业量身调整案例、练习与工具。可申请 HRD Corp 津贴。</span></p>
+    <div class="hero-cta">
+      <a class="btn btn-primary" href="https://wa.me/60184043913" target="_blank" rel="noopener"><svg><use href="#i-wa"/></svg><span class="en">WhatsApp +60 18-404 3913</span><span class="zh">WhatsApp +60 18-404 3913</span></a>
+      <a class="btn btn-ghost" href="mailto:david@daction.com"><svg><use href="#i-mail"/></svg>david@daction.com</a>
+    </div>
+    <div class="contact">
+      <a href="https://www.davidhooi.com" target="_blank" rel="noopener"><svg><use href="#i-web"/></svg>www.davidhooi.com</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap"><span class="flogo"><img src="assets/dac-logo.png" alt="DAC — Firing Up Growth"></span><span>© 2026 D Action Consultancy &amp; Services Sdn Bhd (202501060150)</span></div>
+</footer>
+
+<a class="wa-float" href="https://wa.me/60184043913" target="_blank" rel="noopener" aria-label="WhatsApp"><svg><use href="#i-wa"/></svg></a>
+
+<script>document.documentElement.classList.add("js");</script>
+<script>
+(function(){
+  var titles={en:"AI for the Modern Workforce | David Hooi",zh:"企业AI实战培训 | David Hooi"};
+  function setLang(l){
+    if(l!=="zh")l="en";
+    var h=document.documentElement;
+    h.setAttribute("data-lang",l);
+    h.setAttribute("lang",l==="zh"?"zh-Hans":"en");
+    document.title=titles[l];
+    document.querySelectorAll("[data-set-lang]").forEach(function(b){b.setAttribute("aria-pressed",b.dataset.setLang===l)});
+    try{localStorage.setItem("lang",l)}catch(e){}
+  }
+  var q=new URLSearchParams(location.search).get("lang"),saved=null;
+  try{saved=localStorage.getItem("lang")}catch(e){}
+  var nav=(navigator.language||"").toLowerCase().indexOf("zh")===0?"zh":"en";
+  setLang(q||saved||nav);
+  var els=document.querySelectorAll(".sec-head,.card,.dl li,.imp,.step,.mix,.t-photo,.creds,.brands .box,.cta h2,.toolwall");
+  els.forEach(function(e,i){e.classList.add("reveal");e.style.transitionDelay=((i%3)*80)+"ms"});
+  if("IntersectionObserver" in window){var io=new IntersectionObserver(function(es){es.forEach(function(x){if(x.isIntersecting){x.target.classList.add("in");io.unobserve(x.target)}})},{threshold:.12});els.forEach(function(e){io.observe(e)})}else{els.forEach(function(e){e.classList.add("in")})}
+  document.querySelectorAll("[data-set-lang]").forEach(function(b){
+    b.addEventListener("click",function(){setLang(b.dataset.setLang)});
+  });
+})();
+</script>
+</body>
+</html>
