@@ -104,12 +104,15 @@ html[data-lang="zh"] .hero h1 small{font-size:.34em;color:rgba(255,255,255,.62)}
 .hero-tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:28px}
 .hero-tags span{font-size:13px;font-weight:600;padding:6px 12px;border-radius:999px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.18)}
 .hero-photo{position:relative;justify-self:center;width:100%;max-width:420px}
-.hero-photo .frame{border-radius:28px;overflow:hidden;background:#fff;box-shadow:0 30px 60px rgba(0,0,0,.35);aspect-ratio:4/4.6}
-.hero-photo .frame img{width:100%;height:100%;object-fit:cover;object-position:top center}
+.hero-photo .frame{border-radius:28px;overflow:hidden;background:#0b3a28;box-shadow:0 30px 60px rgba(0,0,0,.35);aspect-ratio:4/4.8}
+.hero-photo .frame img{width:100%;height:100%;object-fit:cover;object-position:center 40%}
 .hero-photo .badge{position:absolute;left:-26px;bottom:28px;background:#fff;color:var(--ink);border-radius:16px;padding:12px 16px;display:flex;gap:12px;align-items:center;box-shadow:0 14px 30px rgba(0,0,0,.25)}
-.hero-photo .badge img{width:52px;height:52px}
+.hero-photo .badge{text-decoration:none;transition:transform .2s}
+.hero-photo .badge:hover{transform:translateY(-3px)}
+.hero-photo .badge img.av{width:54px;height:54px;border-radius:50%;object-fit:cover;object-position:top;border:3px solid var(--orange)}
 .hero-photo .badge strong{display:block;font-size:15px}
-.hero-photo .badge small{color:var(--muted);font-size:13px}
+.hero-photo .badge small{display:block;color:var(--muted);font-size:13px}
+.hero-photo .badge small:first-child{color:var(--orange-2);font-weight:700;font-size:11px;letter-spacing:.1em;text-transform:uppercase}
 
 /* stats */
 .stats{background:var(--bg-2);border-bottom:1px solid var(--line)}
@@ -157,6 +160,12 @@ html[data-lang="zh"] .hero h1 small{font-size:.34em;color:rgba(255,255,255,.62)}
 .rolefinder{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:24px;box-shadow:var(--shadow);margin-bottom:28px}
 .rf-q{font-weight:700;margin-bottom:12px}
 .roles{display:flex;flex-wrap:wrap;gap:10px}
+.rf-q2{margin-top:20px}
+.ind{font:inherit;font-size:14px;font-weight:600;padding:8px 15px;border-radius:999px;border:1.5px dashed var(--line);background:var(--bg-2);color:var(--ink);cursor:pointer;transition:all .15s}
+.ind:hover{border-color:var(--orange);color:var(--orange-2)}
+.ind[aria-pressed="true"]{background:var(--orange);border:1.5px solid var(--orange);color:#fff}
+#rfInd li{background:var(--orange-soft);color:var(--orange-2)}
+#rfRole+#rfInd:not([hidden]){margin-top:18px}
 .role{font:inherit;font-size:15px;font-weight:600;padding:10px 18px;border-radius:999px;border:1.5px solid var(--line);background:#fff;color:var(--ink);cursor:pointer;transition:all .15s}
 .role:hover{border-color:var(--green-2);color:var(--green)}
 .role[aria-pressed="true"]{background:var(--green);border-color:var(--green);color:#fff}
@@ -361,11 +370,11 @@ footer .flogo img{height:38px;width:auto}
       </div>
     </div>
     <div class="hero-photo">
-      <div class="frame"><img src="assets/david-hooi.jpg" alt="David Hooi" width="800" height="923"></div>
-      <div class="badge">
-        <img src="assets/hrdc-badge.png" alt="HRD Corp Accredited Trainer">
-        <div><strong>David Hooi</strong><small class="en">HRD Corp Accredited Trainer</small><small class="zh">HRD Corp 认证培训师</small></div>
-      </div>
+      <div class="frame"><img src="assets/course-hero.jpg" alt="A Malaysian corporate team working hands-on with AI assistants, dashboards and automation workflows" width="900" height="1350"></div>
+      <a class="badge" href="#trainer">
+        <img class="av" src="assets/david-hooi.jpg" alt="">
+        <div><small><span class="en">Your trainer</span><span class="zh">培训师</span></small><strong>David Hooi</strong><small><span class="en">HRD Corp Accredited Trainer</span><span class="zh">HRD Corp 认证培训师</span></small></div>
+      </a>
     </div>
   </div>
 </header>
@@ -447,7 +456,7 @@ footer .flogo img{height:38px;width:auto}
     <div class="sec-head">
       <span class="eyebrow"><span class="en">Explore the programme</span><span class="zh">课程内容</span></span>
       <h2 style="margin-top:14px"><span class="en">Two days, six modules, one roadmap</span><span class="zh">两天、六个模块、一份路线图</span></h2>
-      <p><span class="en">Pick your role to see which modules will matter most to you, then open any module for the details.</span><span class="zh">选择您的岗位，看看哪些模块与您最相关；点击任一模块查看详细内容。</span></p>
+      <p><span class="en">Pick your role and industry to see which modules matter most and how teams like yours apply them. Open any module for the details.</span><span class="zh">选择您的岗位与行业，看看哪些模块最相关、同行如何应用；点击任一模块查看详细内容。</span></p>
     </div>
 
     <div class="rolefinder">
@@ -460,9 +469,28 @@ footer .flogo img{height:38px;width:auto}
         <button type="button" class="role" data-role="fin" aria-pressed="false"><span class="en">Finance &amp; Analysts</span><span class="zh">财务与分析</span></button>
         <button type="button" class="role" data-role="ops" aria-pressed="false"><span class="en">Operations &amp; Admin</span><span class="zh">营运与行政</span></button>
       </div>
+      <p class="rf-q rf-q2"><span class="en">My industry is…</span><span class="zh">我的行业是…</span></p>
+      <div class="roles" role="group" aria-label="Industry">
+        <button type="button" class="ind" data-ind="bank" aria-pressed="false"><span class="en">Banking &amp; Finance</span><span class="zh">银行与金融</span></button>
+        <button type="button" class="ind" data-ind="ins" aria-pressed="false"><span class="en">Insurance</span><span class="zh">保险</span></button>
+        <button type="button" class="ind" data-ind="retail" aria-pressed="false"><span class="en">Retail &amp; FMCG</span><span class="zh">零售与快消</span></button>
+        <button type="button" class="ind" data-ind="mfg" aria-pressed="false"><span class="en">Manufacturing</span><span class="zh">制造业</span></button>
+        <button type="button" class="ind" data-ind="auto" aria-pressed="false"><span class="en">Automotive</span><span class="zh">汽车</span></button>
+        <button type="button" class="ind" data-ind="prop" aria-pressed="false"><span class="en">Property</span><span class="zh">房地产</span></button>
+        <button type="button" class="ind" data-ind="energy" aria-pressed="false"><span class="en">Oil, Gas &amp; Energy</span><span class="zh">石油、天然气与能源</span></button>
+        <button type="button" class="ind" data-ind="edu" aria-pressed="false"><span class="en">Education</span><span class="zh">教育</span></button>
+        <button type="button" class="ind" data-ind="pro" aria-pressed="false"><span class="en">Professional Services</span><span class="zh">专业服务</span></button>
+        <button type="button" class="ind" data-ind="gov" aria-pressed="false"><span class="en">Government &amp; GLC</span><span class="zh">政府与官联</span></button>
+      </div>
       <div class="rf-out" id="rfOut" hidden>
-        <p class="rf-h"><span class="en">What you could do after the programme:</span><span class="zh">课程结束后，您可以：</span></p>
-        <ul id="rfWins"></ul>
+        <div id="rfRole" hidden>
+          <p class="rf-h"><span class="en">For your role, after the programme you could:</span><span class="zh">针对您的岗位，课程结束后您可以：</span></p>
+          <ul id="rfWins"></ul>
+        </div>
+        <div id="rfInd" hidden>
+          <p class="rf-h"><span class="en">In your industry, teams use these skills for:</span><span class="zh">在您的行业，团队会把这些技能用于：</span></p>
+          <ul id="rfIndWins"></ul>
+        </div>
       </div>
     </div>
 
@@ -680,14 +708,22 @@ footer .flogo img{height:38px;width:auto}
     document.querySelectorAll('.role').forEach(function(b){b.setAttribute('aria-pressed','false')});
     document.querySelectorAll('.mod').forEach(function(m){m.classList.remove('hl')});
     document.querySelectorAll('.cnt').forEach(function(c){c.classList.remove('on')});
-    if(!on){ex.classList.remove('filtering');out.hidden=true;return}
+    if(!on){ex.classList.remove('filtering');document.getElementById('rfRole').hidden=true;syncOut();return}
     btn.setAttribute('aria-pressed','true');ex.classList.add('filtering');
     var r=R[btn.dataset.role],first=null;
     r.mods.forEach(function(id){var m=document.querySelector('.mod[data-mod="'+id+'"]');m.classList.add('hl');if(!first)first=m});
     ['d1','d2'].forEach(function(d){var n=document.querySelectorAll('#pane-'+d+' .mod.hl').length,c=document.querySelector('[data-cnt='+d+']');c.textContent=n;c.classList.toggle('on',n>0)});
     wins.innerHTML=r.wins.map(function(w){return '<li><span class="en">'+w[0]+'</span><span class="zh">'+w[1]+'</span></li>'}).join('');
-    out.hidden=false;
+    document.getElementById('rfRole').hidden=false;syncOut();
     if(first){showTab(document.getElementById(first.closest('.pane').id.replace('pane','tab')));document.querySelectorAll('.mod').forEach(function(m){m.open=m.classList.contains('hl')&&m===first})}
+  })});
+  function syncOut(){out.hidden=document.getElementById('rfRole').hidden&&document.getElementById('rfInd').hidden}
+  var I={"bank":[["Credit memos and regulatory circulars summarised with NotebookLM","用 NotebookLM 摘要信贷备忘录与监管通告"],["Branch performance dashboards from raw data","用原始数据生成分行业绩仪表板"],["Consistent, compliant customer follow-up templates","统一且合规的客户跟进模板"]],"ins":[["Policies explained simply in English, Malay or Chinese","用简单的英文、马来文或中文解释保单"],["Agent recruitment and training content","代理招募与培训内容"],["Sales and claims trend analysis","销售与理赔趋势分析"]],"retail":[["Product visuals and short videos for campaigns","产品视觉与宣传短视频"],["Sales and inventory insights by outlet","按门店分析销售与库存"],["Festive campaign plans for Raya, CNY and Deepavali","开斋节、农历新年、屠妖节节庆营销企划"]],"mfg":[["SOPs and quality reports summarised instantly","即时摘要 SOP 与品质报告"],["Supplier evaluation and cost analysis","供应商评估与成本分析"],["Production KPI dashboards","生产 KPI 仪表板"]],"auto":[["Model launch content and video","新车发布内容与视频"],["Lead follow-up and test-drive reminders","潜在客户跟进与试驾提醒"],["Dealer sales performance dashboards","经销商销售业绩仪表板"]],"prop":[["Project brochures turned into listings and social posts","把项目手册变成房源文案与社媒帖子"],["Market and location research briefs","市场与地段调研报告"],["A buyer FAQ assistant","购房者 FAQ 助手"]],"energy":[["Technical reports condensed into management briefings","技术报告浓缩成管理层汇报"],["HSE training materials and infographics","HSE 培训教材与信息图"],["Project cost and budget scenarios","项目成本与预算情境分析"]],"edu":[["Lesson plans, quizzes and slides in minutes","几分钟完成教案、测验与简报"],["A student enquiry chatbot","学生咨询聊天机器人"],["Programme marketing content","课程招生营销内容"]],"pro":[["Proposals and client reports drafted faster","更快起草提案与客户报告"],["Research briefs on clients and industries","客户与行业调研简报"],["A knowledge-base assistant for the team","团队知识库助手"]],"gov":[["Policy papers and meeting minutes summarised","摘要政策文件与会议记录"],["Bilingual public communications","双语公共沟通内容"],["Programme performance dashboards","计划绩效仪表板"]]};
+  document.querySelectorAll('.ind').forEach(function(btn){btn.addEventListener('click',function(){
+    var on=btn.getAttribute('aria-pressed')!=='true',box=document.getElementById('rfInd');
+    document.querySelectorAll('.ind').forEach(function(b){b.setAttribute('aria-pressed','false')});
+    if(on){btn.setAttribute('aria-pressed','true');document.getElementById('rfIndWins').innerHTML=I[btn.dataset.ind].map(function(w){return '<li><span class="en">'+w[0]+'</span><span class="zh">'+w[1]+'</span></li>'}).join('');box.hidden=false}else{box.hidden=true}
+    syncOut();
   })});
   document.querySelectorAll('.tabs button').forEach(function(b){b.addEventListener('click',function(){var p=document.getElementById(b.getAttribute('aria-controls'));var f=p.querySelector('.mod.hl')||p.querySelector('.mod');if(f&&!p.querySelector('.mod[open]'))f.open=true})});
   var els=document.querySelectorAll(".fact,.rolefinder,.tabs,.sec-head,.card,.dl li,.imp,.step,.mix,.t-photo,.creds,.brands .box,.cta h2,.toolwall");
